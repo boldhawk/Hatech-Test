@@ -1,7 +1,9 @@
 #Setup#
 
-npm install -g protractor,
-webdriver-manager update,
+npm install -g protractor
+
+webdriver-manager update
+
 gem install hiptest-publisher
 
 #Get Test#
