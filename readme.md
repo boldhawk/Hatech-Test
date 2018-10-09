@@ -2,6 +2,7 @@
 
 npm install -g protractor
 webdriver-manager update
+gem install hiptest-publisher
 
 #Get Test#
 hiptest-publisher -c hiptest-publisher.conf --only=tests --test-run-id=199977
