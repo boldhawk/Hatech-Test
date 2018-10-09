@@ -2,32 +2,26 @@ exports.Actionwords = {
   iNavigateToP1: function (p1) {
     browser.get('https://' + p1)
   },
-  verifyTheUrlP1: function (p1) {
+  iVerifyTheUrlP1: function (p1) {
    const EC = protractor.ExpectedConditions;
-   browser.wait(EC.urlContains('https://' + p1), 2500);
+    browser.wait(EC.urlContains('https://' + p1), 2500);
   },
-  iClickOnP1: function (p1) {
+  iClickOnP1P2: function (p1, p2) {
     element(by.css(p1)).click()
   },
-  iVerifyThatAdminUrlP1P2: function (p1, p2) {
+  iVerifyTheUrlP1P2: function (p1, p2) {
    const EC = protractor.ExpectedConditions;
    browser.wait(EC.urlContains('https://' + p1 + '/' + p2), 2500);
   },
-  iEnterMyAdminUsernameP1: function (admin_name) {
-   element(by.css('#user_login')).sendKeys('' + admin_name)
+  iEnterMyUsernameP1P2: function (p1, p2) {
+   element(by.css(p1)).sendKeys('' + p2)
   },
-  iEnterMyAdminPasswordP1: function (admin_pass) {
-   element(by.css('#user_pass')).sendKeys('' + admin_pass)
+  iEnterMyPasswordP1P2: function (p1, p2) {
+   element(by.css(p1)).sendKeys('' + p2)
   },
-  iClickP1: function (p1) {
-   element(by.css('.tml-button')).click()
-  },
-  verifyTheUrlIsP1: function (p1) {
-   const EC = protractor.ExpectedConditions;
-   browser.wait(EC.urlContains('https://hatech.io'), 2500);
-  },
-  iHoverOverP1: function (p1) {
-  },
-  iClickLogOutP1: function (p1) {
-  },
+  iClickOnAnInvisibleButtonP1P2: function (p1, p2) {
+    browser.get('https://' + p1)
+    browser.sleep(2500);
+    element(by.css(p2)).click()
+  }
 };

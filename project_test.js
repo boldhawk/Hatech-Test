@@ -4,57 +4,50 @@ describe('HATech Test', function () {
   });
 
   describe('Login', function () {
-    function login (admin_login_url, login, login_button, hatech_admin_url, admin_name, admin_pass, profile, sign_out) {
+    function login (login_url, login, login_button, admin_name, admin_pass, sign_out) {
       // When I Navigate to ""
       this.actionwords.iNavigateToP1(env.siteUrl);
-      // And verify the url ""
-      this.actionwords.verifyTheUrlP1(env.siteUrl);
-      // Then I click on "<login_button>"
-      this.actionwords.iClickOnP1(login_button);
-      // And I Verify that Admin Url "env.siteUrl" "<admin_login_url>"
-      this.actionwords.iVerifyThatAdminUrlP1P2(env.siteUrl, admin_login_url);
-      // Then I enter my Admin Username "<admin_name>"
-      this.actionwords.iEnterMyAdminUsernameP1(admin_name);
-      // And I enter my Admin Password "<admin_pass>"
-      this.actionwords.iEnterMyAdminPasswordP1(admin_pass);
-      // Then I click "<Login>"
-      this.actionwords.iClickP1(login);
-      // And verify the url is "<hatech_admin_url>"
-      this.actionwords.verifyTheUrlIsP1(hatech_admin_url);
-      // Then I hover over "<Profile>"
-      this.actionwords.iHoverOverP1(profile);
-      // And I Click Log Out "<Sign_Out>"
-      this.actionwords.iClickLogOutP1(sign_out);
+      // And I Verify the Url ""
+      this.actionwords.iVerifyTheUrlP1(env.siteUrl);
+      // Then I click on "env.loginMenu" "<login_button>"
+      this.actionwords.iClickOnP1P2(env.loginMenu, login_button);
+      // And I Verify the Url "env.siteUrl" "<login_url>"
+      this.actionwords.iVerifyTheUrlP1P2(env.siteUrl, login_url);
+      // Then I enter my Username "env.username" "<admin_name>"
+      this.actionwords.iEnterMyUsernameP1P2(env.username, admin_name);
+      // And I enter my Password "env.password" "<admin_pass>"
+      this.actionwords.iEnterMyPasswordP1P2(env.password, admin_pass);
+      // Then I click on "env.loginButton" "<Login>"
+      this.actionwords.iClickOnP1P2(env.loginButton, login);
+      // And I Verify the Url ""
+      this.actionwords.iVerifyTheUrlP1(env.siteUrl);
+      // Then I click on an invisible button "env.signout" "<sign_out>"
+      this.actionwords.iClickOnAnInvisibleButtonP1P2(env.signout, sign_out);
     }
 
-    it(' (uid:a32fd08a-b670-4929-9840-e18bd8cc44eb)', function () {
-      login.apply(this, ['login', '.tml-button', '#menu-item-765 > a > span', 'wp-admin', 'mhathaway', 'ahp1hzc)IYJdaZJhzJijIOij', '#wp-admin-bar-my-account > .ab-item', '#wp-admin-bar-logout > .ab-item\'']);
+    it(' (uid:9b8fac77-d564-498e-8785-7258daa37a8f)', function () {
+      login.apply(this, ['login/', '.tml-button', '#menu-item-765 > a > span', 'mhathaway', 'ahp1hzc)IYJdaZJhzJijIOij', 'body > p:nth-child(2) > a']);
     });
   });
 
 
   describe('User Login', function () {
-    function userLogin (user_login_url, login, login_button, base_user_url, user_name, user_pass) {
-      // When I Navigate to "<Base_User_url>"
-      this.actionwords.iNavigateToP1(base_user_url);
-      // And verify the url "<Base_User_url>"
-      this.actionwords.verifyTheUrlP1(base_user_url);
-      // Then I click on "<login_button>"
-      this.actionwords.iClickOnP1(login_button);
-      // And I Verify that User Url "<User_login_url>"
-      this.actionwords.iVerifyThatUserUrlP1(user_login_url);
-      // Then I enter my User Username "<User_name>"
-      this.actionwords.iEnterMyUserUsernameP1(user_name);
-      // And I enter my User Password "<User_pass>"
-      this.actionwords.iEnterMyUserPasswordP1(user_pass);
-      // Then I click "<Login>"
-      this.actionwords.iClickP1(login);
-      // And verify the url "<Base_User_url>"
-      this.actionwords.verifyTheUrlP1(base_user_url);
+    function userLogin (login_url, login, login_button, user_name, user_pass) {
+      // And I Verify the Url "env.siteUrl" "<login_url>"
+      this.actionwords.iVerifyTheUrlP1P2(env.siteUrl, login_url);
+      // Then I enter my Username "env.username" "<user_name>"
+      this.actionwords.iEnterMyUsernameP1P2(env.username, user_name);
+      // And I enter my Password "env.password" "<user_pass>"
+      this.actionwords.iEnterMyPasswordP1P2(env.password, user_pass);
+      // Then I click on "env.loginButton" "<Login>"
+      this.actionwords.iClickOnP1P2(env.loginButton, login);
+      // And I Verify the Url ""
+      this.actionwords.iVerifyTheUrlP1(env.siteUrl);
+      browser.sleep(7500);
     }
 
-    it(' (uid:d3408f00-ae02-4b8b-ae66-52998d92a4ed)', function () {
-      userLogin.apply(this, ['login', '.tml-button', '#menu-item-765 > a > span', 'hatech.io', 'mikehathaway', 'VroewOoNjZu3uE7oZo5taXy6OepOYPU6S8ZpOESsW3MS0xaAoZUHrzXqhGBYQ1TKu45V3sIiKDkymtCUmTMeOhjQmYaKS75Ov']);
+    it(' (uid:e0ac3aad-08c9-4605-b022-03644cc241ca)', function () {
+      userLogin.apply(this, ['login/', '.tml-button', '#menu-item-765 > a > span', 'mikehathaway', 'VroewOoNjZu3uE7oZo5taXy6OepOYPU6S8ZpOESsW3MS0xaAoZUHrzXqhGBYQ1TKu45V3sIiKDkymtCUmTMeOhjQmYaKS75Ov']);
     });
   });
 });

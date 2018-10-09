@@ -4,7 +4,7 @@ npm install -g protractor
 webdriver-manager update
 
 #Get Test#
-hiptest-publisher -c hiptest-publisher.conf --only=tests --test-run-id=199947
+hiptest-publisher -c hiptest-publisher.conf --only=tests --test-run-id=199977
 
 (change id for the test run you want to complete)
 
