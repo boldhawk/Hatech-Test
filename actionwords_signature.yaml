@@ -1,0 +1,41 @@
+---
+- name: I Navigate to "p1"
+  uid: c2ee1a76-b32d-4259-8312-a8b78e95d8b9
+  parameters:
+  - name: p1
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: I click on "p1"
+  uid: 67ebaa51-c981-418f-a57f-43dec4a03921
+  parameters:
+  - name: p1
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: I Verify that Admin Url "p1"
+  uid: 7c7926ec-f178-4934-93e2-a29e9bbfbbc4
+  parameters:
+  - name: p1
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: I enter my "p1"
+  uid: bba33166-b4fe-435f-8835-f574715182c1
+  parameters:
+  - name: p1
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: 'I click "p1" '
+  uid: 79c40e3c-54b9-421f-bf80-7e6695d29149
+  parameters:
+  - name: p1
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: verify the url is "p1"
+  uid: 0703ff46-01f9-4854-adf6-c21d4c76c227
+  parameters:
+  - name: p1
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: I enter my Admin Username "p1"
+  uid: 9325b860-d937-455b-bd2b-d4140e80454b
+  parameters:
+  - name: p1
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: I enter my Admin Password "p1"
+  uid: 34647dba-de6a-49bd-88a0-b7490f3004b0
+  parameters:
+  - name: p1
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
